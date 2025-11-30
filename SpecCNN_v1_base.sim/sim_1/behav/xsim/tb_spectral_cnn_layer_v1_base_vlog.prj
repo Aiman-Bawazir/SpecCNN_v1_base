@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/activation_block_32b.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/new/control_unit.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/new/ewm_block.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/fft_4point_1.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/fft_4point_2.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/fft_4x4_2d.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/fft_control_unit.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/fft_data_unit.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/fixed_point_complex_multiplier_16b_32b_out.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/new/spectral_cnn_layer.v" \
+"../../../../SpecCNN_v1_base.srcs/sources_1/imports/new/sram_sync_single_port.v" \
+"../../../../SpecCNN_v1_base.srcs/sim_1/new/tb_spectral_cnn_layer_v1_base.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

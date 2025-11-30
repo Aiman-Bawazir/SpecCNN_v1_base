@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_spectral_cnn_layer_v1_base_behav/xsimk.exe -simmode gui -wdb tb_spectral_cnn_layer_v1_base_behav.wdb -simrunnum 0 -socket 65331
+Design successfully loaded
+Design Loading Memory Usage: 29768 KB (Peak: 29768 KB)
+Design Loading CPU Usage: 1702 ms
+Simulation completed
+Simulation Memory Usage: 31156 KB (Peak: 31156 KB)
+Simulation CPU Usage: 1859 ms

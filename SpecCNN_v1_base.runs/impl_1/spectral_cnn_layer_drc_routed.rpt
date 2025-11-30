@@ -1,0 +1,121 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Jun 16 09:38:34 2025
+| Host         : MKZ_XPS9500 running 64-bit major release  (build 9200)
+| Command      : report_drc -file spectral_cnn_layer_drc_routed.rpt -pb spectral_cnn_layer_drc_routed.pb -rpx spectral_cnn_layer_drc_routed.rpx
+| Design       : spectral_cnn_layer
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 14
++--------+------------------+----------------------------+--------+
+| Rule   | Severity         | Description                | Checks |
++--------+------------------+----------------------------+--------+
+| NSTD-1 | Critical Warning | Unspecified I/O Standard   | 1      |
+| UCIO-1 | Critical Warning | Unconstrained Logical Port | 1      |
+| DPIP-2 | Warning          | Input pipelining           | 8      |
+| DPOP-4 | Warning          | MREG Output pipelining     | 4      |
++--------+------------------+----------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+326 out of 326 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: kernel_data_in_bus[15:0], kernel_load_addr_bus[7:0],
+output_sram_data_out[31:0], output_sram_read_addr[7:0],
+raw_input_data_0[15:0], raw_input_data_10[15:0], raw_input_data_11[15:0],
+raw_input_data_12[15:0], raw_input_data_13[15:0], raw_input_data_14[15:0],
+raw_input_data_15[15:0], raw_input_data_1[15:0], raw_input_data_2[15:0],
+raw_input_data_3[15:0], raw_input_data_4[15:0]
+ (the first 15 of 26 listed).
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+326 out of 326 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: kernel_data_in_bus[15:0], kernel_load_addr_bus[7:0],
+output_sram_data_out[31:0], output_sram_read_addr[7:0],
+raw_input_data_0[15:0], raw_input_data_10[15:0], raw_input_data_11[15:0],
+raw_input_data_12[15:0], raw_input_data_13[15:0], raw_input_data_14[15:0],
+raw_input_data_15[15:0], raw_input_data_1[15:0], raw_input_data_2[15:0],
+raw_input_data_3[15:0], raw_input_data_4[15:0]
+ (the first 15 of 26 listed).
+Related violations: <none>
+
+DPIP-2#1 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ai_bi_s1 input ewm_inst_top_level/complex_mult_inst/p_ai_bi_s1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ai_bi_s1 input ewm_inst_top_level/complex_mult_inst/p_ai_bi_s1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ai_br_s1 input ewm_inst_top_level/complex_mult_inst/p_ai_br_s1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ai_br_s1 input ewm_inst_top_level/complex_mult_inst/p_ai_br_s1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ar_bi_s1 input ewm_inst_top_level/complex_mult_inst/p_ar_bi_s1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ar_bi_s1 input ewm_inst_top_level/complex_mult_inst/p_ar_bi_s1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ar_br_s1 input ewm_inst_top_level/complex_mult_inst/p_ar_br_s1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ar_br_s1 input ewm_inst_top_level/complex_mult_inst/p_ar_br_s1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ai_bi_s1 multiplier stage ewm_inst_top_level/complex_mult_inst/p_ai_bi_s1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ai_br_s1 multiplier stage ewm_inst_top_level/complex_mult_inst/p_ai_br_s1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ar_bi_s1 multiplier stage ewm_inst_top_level/complex_mult_inst/p_ar_bi_s1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP ewm_inst_top_level/complex_mult_inst/p_ar_br_s1 multiplier stage ewm_inst_top_level/complex_mult_inst/p_ar_br_s1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

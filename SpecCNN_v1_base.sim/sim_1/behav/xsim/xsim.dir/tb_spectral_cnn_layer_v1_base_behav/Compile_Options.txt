@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_spectral_cnn_layer_v1_base_behav" "xil_defaultlib.tb_spectral_cnn_layer_v1_base" "xil_defaultlib.glbl" -log "elaborate.log" 

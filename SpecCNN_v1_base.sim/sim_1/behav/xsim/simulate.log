@@ -1,0 +1,24 @@
+Time resolution is 1 ps
+====================================================
+[0 ns] Starting V1_Base Top-Level Testbench
+====================================================
+[55000 ns] TB: Reset Released.
+[55000 ns] TB: Starting Kernel Load (192 16-bit words)...
+[1985000 ns] TB: Kernel Load Finished.
+    -> Kernel Load Time: 193 cycles.
+[2035000 ns] TB: Applying Raw Input Data...
+[2035000 ns] TB: Raw Input Data Applied.
+[2055000 ns] TB: Asserting top_start_tb for one cycle.
+[2055000 ns] TB: Waiting for layer completion (Timeout: 3000 cycles)...
+[15915000 ns] TB: *** TEST PASSED! *** top_layer_done asserted.
+    -> Processing Time: 1386 cycles.
+--- Output SRAM Spot Check ---
+Output SRAM Addr 0   (Res 0 Real): Data=0x00000000
+Output SRAM Addr 1   (Res 0 Imag): Data=0x00000000
+Output SRAM Addr 190 (Res 95 Real): Data=0x00000000
+Output SRAM Addr 191 (Res 95 Imag): Data=0x00000000
+====================================================
+[16025000 ns] V1_Base Testbench Finished.
+    -> Total Simulation Time: 1597 cycles.
+====================================================
+$finish called at time : 16025 ns : File "C:/Users/mhmou/Documents/2_Projects/1. Vivado/SpecCNN_v1_base/SpecCNN_v1_base.srcs/sim_1/new/tb_spectral_cnn_layer_v1_base.v" Line 228
